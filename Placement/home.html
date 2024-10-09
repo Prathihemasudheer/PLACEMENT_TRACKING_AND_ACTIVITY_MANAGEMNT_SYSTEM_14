@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+        :root {
+            --normal-font: 400;
+            --bold-font: 700;
+            --bolder-font: 900;
+            --primary-color: blue;
+            --secondary-color: red;
+            --line-height: 1.7rem;
+            --transition: 0.4s ease-in;
+            --dark-bg: #212121;
+            --dark-text: #ffffff;
+            --dark-nav-bg: #1f1f1f;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: var(--transition);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        body.dark-mode nav {
+            background: var(--dark-nav-bg);
+        }
+        body.dark-mode .begin {
+            color: var(--secondary-color);
+        }
+        body.dark-mode .xy {
+            color: var(--primary-color);
+        }
+        body.dark-mode .fa-brands {
+            color: #f1f1f1;
+        }
+        body.dark-mode ul {
+            color: var(--dark-text);
+        }
+        body.dark-mode a {
+            color: var(--dark-text);
+        }
+        body.dark-mode a:hover {
+            color: var(--secondary-color);
+        }
+        a {
+            text-decoration: none;
+            color:black;
+        }
+        a:hover {
+            color: var(--secondary-color);
+        }
+        .begin {
+            color: var(--primary-color);
+        }
+        .xy {
+            color: var(--secondary-color);
+        }
+        ul li {
+            list-style-type: none;
+        }
+        nav {
+            background: rgb(225, 198, 198);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            box-shadow: 2px 3px 2px #f1f1f1;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-item {
+            margin-left: 2rem;
+        }
+        .nav-link {
+            font-weight: var(--bold-font);
+        }
+        #toggle {
+            width: 30px;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: block;
+                cursor: pointer;
+            }
+            ul {
+                background-color: #5422b9;
+                flex-direction: column;
+                position: fixed;
+                left: 100%;
+                top: 5rem;
+                width: 100%;
+                text-align: center;
+            }
+            ul.active {
+                left: 0;
+            }
+            .nav-item {
+                margin: 2rem 0;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+        .head {
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head1 {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;     /* Centers items vertically */
+    height: 100vh;           /* Full viewport height for vertical centering */
+}
+.try, .demo {
+    margin: 0 10px; /* Adds some spacing between the two buttons */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+img {
+    width: 100%;
+}
+
+        button {
+            
+            display: inline-block;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    padding: 2px 16px;
+                    height: 38px;
+                    width: 100px;
+                    min-width: 96px;
+                    min-height: 38px;
+                    border: none;
+                    color: #fff;
+                    background-color: rgb(88, 101, 242);
+                    transition: background-color .17s ease,color .17s ease;
+                    :hover {
+                        background-color: rgb(71, 82, 196);
+                    }
+                
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <h1>
+                <span style="color: black;"><i class="fa-brands fa-xing"></i></span>
+                <span class="begin">Placement</span>
+                <span class="xy">Portal</span>
+            </h1>
+        </a>
+        <span id="toggle"><i class="fa-solid fa-moon"></i></span>
+        <ul>
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#blog" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <h1 style="color: red;" class="head">Parctice. Made Perfect</h1>
+    <pre class="head1">
+    Turn high-Stakes conversation into consistent Wins
+         With relastic Voice-Based AI training
+    </pre>
+    <div class="details">
+        <summary>More</summary>
+    <details>
+    <p>The Placement Portal is a comprehensive tool created to make hiring students, businesses, and institutions easier. Businesses can post job openings, students can apply for those positions, and all parties can follow the application process in real time. Recruiters and candidates may easily manage job postings, applications, and communication through the system's user-friendly interface. Additionally, it facilitates comprehensive analytics to track placement data and success rates, improving the effectiveness of campus placements.</p>
+</details>
+<img src="1641212932287.jpeg" alt="Placement Portal" />
+    </div>
+    <div class="container">
+        <div class="try">
+            <button>Try it Now</button>
+        </div>
+        <div class="demo">
+            <button>Book a Demo</button>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menu = document.querySelector('.menu');
+        const ul = document.querySelector('ul');
+        
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.querySelector('i').classList.toggle('fa-moon');
+            toggle.querySelector('i').classList.toggle('fa-sun');
+        });
+
+        menu.addEventListener('click', () => {
+            ul.classList.toggle('active');
+            menu.querySelector('i').classList.toggle('fa-bars');
+            menu.querySelector('i').classList.toggle('fa-times');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                ul.classList.remove('active');
+                menu.querySelector('i').classList.add('fa-bars');
+                menu.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

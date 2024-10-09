@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Balancing Diets</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    background-image: url('1641212932287.jpeg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Darker text for better contrast */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */    
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.nani {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+.signup-container {
+    border: 2px solid whitesmoke;
+            border-radius: 15px;
+            backdrop-filter: blur(8px); /* Transparent background for the form */
+    padding: 30px; /* Padding around the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 400px; /* Fixed width for the container */
+    margin-right: 50px; /* Add some margin on the right for spacing */
+}
+
+h1 {
+    text-align: center; /* Centered title */
+    margin-bottom: 20px; /* Spacing below the title */
+    color: #1a1a1a; /* Dark gray */
+    font-weight: bold; /* Bold text */
+}
+
+label {
+    display: block; /* Labels as block elements */
+    margin-bottom: 5px; /* Spacing below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Spacing below inputs */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; /* Space before the checkbox */
+}
+
+.terms {
+    margin-bottom: 15px; /* Spacing below the terms checkbox */
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: whitesmoke; /* Button color */
+    color: black; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: rgb(102, 180, 102); /* Color on hover */
+    color: white;
+}
+
+.login-link {
+    text-align: center; /* Centered link */
+    margin-top: 20px; /* Spacing above the link */
+}
+
+.login-link a {
+    color: blueviolet; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.login-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%; /* Make container responsive */
+        margin-right: 20px; /* Adjust right margin for smaller screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="nani">
+
+    
+    <div class="signup-container">
+        <h1 style="color: white;">Sing In</h1>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">terms of service</a></label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
